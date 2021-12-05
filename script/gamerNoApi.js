@@ -5,11 +5,14 @@ fetch(requestUrl)
     .then(data => { 
         const matchesEl = document.getElementById("matches")
         matches = data.data
+        console.log(matches)
         Object.values(matches).forEach(match => {
             var matchDiv = document.createElement("div")
             matchDiv.innerHTML = match.competition.name + " " + match.round_identifier_text
 
             var resultDiv = document.createElement("div")
+            resultDiv.setAttribute("class", "matchDiv")
+            resultDiv.setAttribute("id", match.id)
             resultDiv.innerHTML = match.club_side == "home" ?
                 //Hvis hjemme, BRGN først
                 match.home_signup.team.name +
