@@ -7,13 +7,18 @@ fetch(requestUrl)
         matches = data.data
         console.log(matches)
         Object.values(matches).forEach(match => {
-            var matchDiv = document.createElement("div")
-            matchDiv.setAttribute("class", "matchDiv")
-            matchDiv.setAttribute("id", match.id)
-            matchDiv.innerHTML = match.competition.name + " " + match.round_identifier_text
+            var matchDiv = document.createElement("a")
+            matchDiv.setAttribute("href", match.url)
+            matchDiv.setAttribute("target", "_blank")
+            matchDiv.setAttribute("class", "match")
+            // matchDiv.setAttribute("id", match.id)
+
+            var titleDiv = document.createElement("div")
+            titleDiv.setAttribute("class", "match-title")
+            titleDiv.innerHTML = match.competition.name + " " + match.round_identifier_text
 
             var resultDiv = document.createElement("div")
-            resultDiv.setAttribute("class", "resultDiv")
+            resultDiv.setAttribute("class", "match-result")
             resultDiv.innerHTML = match.club_side == "home" ?
                 //Hvis hjemme, BRGN først
                 match.home_signup.team.name +
@@ -24,8 +29,9 @@ fetch(requestUrl)
                 : match.away_signup.team.name +
                 " " + match.away_score + " - " + match.home_score + " " +
                 match.home_signup.team.name
-            matchDiv.appendChild(resultDiv)
 
+            matchDiv.appendChild(titleDiv)
+            matchDiv.appendChild(resultDiv)
             matchesEl.appendChild(matchDiv)
         })
     })
