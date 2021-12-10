@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 
+body {
+    height: 100%;
+    margin-top: 80px;
+    padding: 30px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+    color: black;
+    position: relative;
+}
+
+#stats {
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+}
+
 #matches {
     display: flex;
     flex-direction: column;
@@ -9,18 +27,34 @@
     padding: 5px;
     margin: 10px;
     width: 30%;
-    color: black;
-    text-decoration: none;
 }
 
 .match-title {
     font-size: 12px;
     font-style: italic;
     color: gray;
+    text-decoration: none;
 }
 
 .match-result {
     font-size: 20px;
+}
+
+.match-result-icon {
+    position: relative;
+    margin-left: 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 2px gray);
+}
+
+.match-result-icon:hover {
+    bottom: 1px;
+    transition:bottom 1s;
+}
+
+.match-result-text {
+    font-size: 15px;
 }
 
 .match-result-win {
@@ -35,27 +69,10 @@
     color: red;
 }
 
-body {
-    height: 100%;
-    margin-top: 80px;
-    padding: 30px;
-    font-family: "Nunito Sans", sans-serif;
-}
-
-body header a img {
-    width: 90px;
-    height: auto;
-}
-
-main {
-    color: black;
-    position: relative;
-    z-index: -1;
-}
-
 /* ------ Header ------ */
 
 header {
+    z-index: 2;
     background-color: white;
     position: fixed;
     top: 0;
@@ -68,8 +85,8 @@ header {
 }
 
 header img {
-    height: 60px;
-    width: auto;
+    width: 90px;
+    height: auto;
     margin-left: 40px;
 }
 
