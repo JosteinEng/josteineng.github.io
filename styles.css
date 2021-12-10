@@ -92,10 +92,3 @@ header li a:hover {
     padding-bottom: 3px;
     transition: 0.2s;
 }
-
-/* ------ Header ------ */
-
-#yeti-room {
-    height: 100%;
-    width: 100%;
-}
