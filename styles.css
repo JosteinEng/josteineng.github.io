@@ -75,7 +75,6 @@ header img {
 
 header * {
     display: inline;
-    white-space: nowrap;  
 }
 
 header li {
