@@ -26,7 +26,7 @@ main {
 .match {
     padding: 5px;
     margin: 10px;
-    width: 30%;
+    width: 100%;
 }
 
 .match-title {
@@ -107,4 +107,19 @@ header li a:hover {
     border-bottom: 2px solid black;
     padding-bottom: 3px;
     transition: 0.2s;
+}
+
+
+/* Responsive for telefon */
+
+@media only screen and (max-width: 600px) {
+    * {
+        text-align: center;
+        align-items: center;
+    }
+
+    #stats {
+    font-size: 1em;
+    }
+
 }
