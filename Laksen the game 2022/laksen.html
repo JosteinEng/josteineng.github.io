@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAKSEN THE GAME 2022</title>
+    <link rel="stylesheet" href="laksen-styles.css">
+    <script>
+        console.log("click the laks");
+    </script>
+</head>
+
+<body>
+
+
+<h1>LAKSEN THE GAME 2022</h1>
+
+
+<script>
+    function onClick() {
+        if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "Clicks: "+ localStorage.clickcount;
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+    }
+</script>
+
+<form>
+    <input class="laks" type ="image" src="laksenbilder/laks.png" onClick="onClick();return false;" alt="bilde av laks">
+    <div class="button" id="result"></div>
+</form>
+
+<!-- Background gif -->
+
+<img class="rain" src="laksenbilder/laksrain.gif" alt="gif av lakseregn">
+
+
+</body>
+</html>

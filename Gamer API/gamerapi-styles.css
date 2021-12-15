@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+body {
+    height: 100%;
+    margin-top: 80px;
+    padding: 30px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+    color: black;
+    position: relative;
+}
+
+#stats {
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#matches {
+    display: flex;
+    flex-direction: column;
+}
+
+.match {
+    padding: 5px;
+    margin: 10px;
+    width: 100%;
+}
+
+.match-title {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+    text-decoration: none;
+}
+
+.match-result {
+    font-size: 20px;
+}
+
+.match-result-icon {
+    position: relative;
+    margin-left: 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 2px gray);
+}
+
+.match-result-icon:hover {
+    bottom: 1px;
+    transition:bottom 1s;
+}
+
+.match-result-text {
+    font-size: 15px;
+}
+
+.match-result-win {
+    color: green;
+}
+
+.match-result-tie {
+    color: blue;
+}
+
+.match-result-loss {
+    color: red;
+}
+
+/* ------ Header ------ */
+
+header {
+    z-index: 2;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px 0 black;
+}
+
+header img {
+    width: 90px;
+    height: auto;
+    margin-left: 40px;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+header li a:hover {
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+    transition: 0.2s;
+}
+
+
+/* Responsive for telefon */
+
+@media only screen and (max-width: 600px) {
+    * {
+        text-align: center;
+        align-items: center;
+    }
+
+    #stats {
+        font-size: 1em;
+    }
+
+}
