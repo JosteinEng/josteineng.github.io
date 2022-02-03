@@ -1,4 +1,4 @@
-const requestUrl = "https://www.gamer.no/api/paradise/club/101211/matchups/results"
+const requestUrl = "https://www.gamer.no/api/paradise/team/101212/results/matchups?page=1"
 
 var wins = 0
 var ties = 0
