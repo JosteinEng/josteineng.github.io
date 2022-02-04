@@ -35,7 +35,7 @@ window.onload = () => {
     
                 var clubSignup
                 var awaySignup
-                if(match.club_side == "home") {
+                if(match.home_signup.team.id == 101212) {
                     clubSignup = match.home_signup
                     clubSignup.score = match.home_score
                     awaySignup = match.away_signup
